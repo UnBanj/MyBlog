@@ -21,6 +21,11 @@ h4 {
   margin-bottom: 0;
 }
 
+p {
+  max-width: 50%;
+  text-align: left;
+}
+
 nav {
   border-bottom: 4px solid black;
   text-align: center;
