@@ -12,6 +12,7 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
     });
     const updatedArticle = response.data;
     onArticleUpdated(updatedArticle);
+    //reset the name and comment
     setName("");
     setCommentText("");
   };

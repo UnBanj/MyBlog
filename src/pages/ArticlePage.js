@@ -42,7 +42,7 @@ const ArticlePage = () => {
         <p key={i}>{paragraph}</p>
       ))}
       <AddCommentForm
-        articleName={article}
+        articleName={articleId}
         onArticleUpdated={(updatedArticle) => setArticleInfo(updatedArticle)}
       />
       <CommentsList comments={articleInfo.comments} />

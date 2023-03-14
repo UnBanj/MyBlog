@@ -81,6 +81,8 @@ nav a:hover {
 
 #add-comment-form input,
 textarea {
+  position: relative;
+  margin: 0 auto;
   display: block;
   width: 300px;
   padding: 8px;
@@ -102,6 +104,10 @@ p {
 }
 
 .comment {
+  position: relative;
+  margin: 0 auto;
+  width: 50%; /*margin around the border */
+  height: 50%; /*margin around the border */
   border-bottom: 2px solid black;
   padding: 16px;
 }

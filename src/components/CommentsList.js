@@ -1,4 +1,4 @@
-const CommentsList = ({ comments }) => {
+const CommentsList = ({ comments }) => (
   <>
     <h3>Comments:</h3>;
     {comments.map((comment) => (
@@ -7,8 +7,7 @@ const CommentsList = ({ comments }) => {
         <p>{comment.text}</p>
       </div>
     ))}
-    ;
-  </>;
-};
+  </>
+);
 
 export default CommentsList;
