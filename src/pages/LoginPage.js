@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
-import { async } from "@firebase/util";
 
 const LoginPage = () => {
   const [email, setEmail] = useState("");
@@ -13,7 +12,7 @@ const LoginPage = () => {
   const logIn = async () => {
     try {
       await signInWithEmailAndPassword(getAuth(), email, password);
-      navigate("/articles");
+      navigate("/articles"); //send the user to the articles page when they log-in
     } catch (e) {
       setError(e.message);
     }
@@ -21,13 +20,16 @@ const LoginPage = () => {
 
   return (
     <>
-      <h1>Log in</h1>;{error && <p className="error">{error}</p>}
+      <h1>Log in</h1>
+      {error && <p className="error">{error}</p>}
       <input
+        className="email"
         placeholder="Your email address"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
       <input
+        className="pass"
         type="password"
         placeholder="Your password"
         value={password}
